@@ -1,0 +1,13 @@
+server:
+  port: 8882
+
+neo4j:
+  driver: org.neo4j.ogm.drivers.http.driver.HttpDriver
+  user: neo4j
+  password: root
+  uri: http://localhost:7474
+
+spring:
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
