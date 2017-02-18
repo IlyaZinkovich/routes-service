@@ -1,4 +1,4 @@
-package com.routes.service.entities;
+package com.routes.service.entity;
 
 public class Place {
 

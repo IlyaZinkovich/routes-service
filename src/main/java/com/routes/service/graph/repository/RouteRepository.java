@@ -1,8 +1,8 @@
 package com.routes.service.graph.repository;
 
-import com.routes.service.entities.Place;
-import com.routes.service.entities.Route;
-import com.routes.service.gateways.RouteGateway;
+import com.routes.service.entity.Place;
+import com.routes.service.entity.Route;
+import com.routes.service.gateway.RouteGateway;
 import com.routes.service.graph.model.PlaceNode;
 import com.routes.service.graph.model.RouteRelationship;
 import org.springframework.beans.factory.annotation.Autowired;

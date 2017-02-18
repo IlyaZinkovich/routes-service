@@ -1,6 +1,6 @@
-package com.routes.service.gateways;
+package com.routes.service.gateway;
 
-import com.routes.service.entities.Route;
+import com.routes.service.entity.Route;
 
 import java.time.LocalDate;
 import java.util.List;

@@ -1,9 +1,11 @@
-package com.routes.service.interactors;
+package com.routes.service.interactor;
 
-import com.routes.service.entities.Route;
-import com.routes.service.gateways.RouteGateway;
+import com.routes.service.entity.Route;
+import com.routes.service.gateway.RouteGateway;
+import com.routes.service.boundary.RoutesBatch;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -22,7 +24,8 @@ public class RouteInteractor {
         return routeGateway.findRoutes(country);
     }
 
-    public void saveRoute(Route route) {
-        routeGateway.save(route);
+    @Transactional
+    public void saveRoutesBatch(RoutesBatch routesBatch) {
+        routesBatch.getRoutes().forEach(routeGateway::save);
     }
 }
